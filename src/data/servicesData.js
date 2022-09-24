@@ -14,6 +14,7 @@ export const servicesData = [
         desc2:'Made with the best quality for the roughest Pouncers!',
         desc3: 'Our rentals inlcude everything needed to get the party going. We recommend checking out our add-ons for even more fun!',
 		imgClass:  {Img2},
+        reverse: 1,
 	},
 	{
 		title: 'Build Your Brand',

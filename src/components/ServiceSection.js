@@ -2,23 +2,39 @@ import React from 'react'
 import styled from 'styled-components'
 import {servicesData} from '../data/servicesData.js'
 export const ServiceSection = (
-
+reverse
 ) => {
     return (
         <ServiceMaster>
-            {servicesData.map((el, index) => (
-            <SubServiceDiv key={index}>
-                <LeftDiv>
-                    <SerivceImg src={el.imgClass} />
+            {servicesData.map((service) =>{
+                console.log(servicesData)
+                if(service.reverse === 1){
+                    return <SubServiceDiv reverse={reverse}>
+                    <LeftDiv>
+                        <SerivceImg src={service.imgClass} />
+                    </LeftDiv>
+                    <RightDiv>
+                        <ServiceTitle>{service.title}</ServiceTitle>
+                        <ServiceDesc>{service.desc}<ServiceDesc>{service.desc2}</ServiceDesc><ServiceDesc>{service.desc3}</ServiceDesc>
+                        </ServiceDesc>
+                    </RightDiv>
+                </SubServiceDiv>
+                } else {
+                    return  <SubServiceDiv>
+                    <LeftDiv>
+                        <SerivceImg src={service.imgClass} />
+                    </LeftDiv>
+                    <RightDiv>
+                        <ServiceTitle>{service.title}</ServiceTitle>
+                        <ServiceDesc>{service.desc}<ServiceDesc>{service.desc2}</ServiceDesc><ServiceDesc>{service.desc3}</ServiceDesc>
+                        </ServiceDesc>
+                    </RightDiv>
+                </SubServiceDiv>
 
-                </LeftDiv>
-                <RightDiv>
-                    <ServiceTitle>{el.title}</ServiceTitle>
-                    <ServiceDesc>{el.desc}<ServiceDesc>{el.desc2}</ServiceDesc><ServiceDesc>{el.desc3}</ServiceDesc>
-                    </ServiceDesc>
-                </RightDiv>
-            </SubServiceDiv>					
-            ))}
+                }
+                
+            					
+})}
 
         </ServiceMaster>
         
@@ -46,7 +62,7 @@ padding: 5rem;
 
 export const SubServiceDiv = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
 justify-content: center;
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
