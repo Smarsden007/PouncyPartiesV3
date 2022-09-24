@@ -16,6 +16,7 @@ export const NavBar = () => {
                         <PouncyLi><a href="/about">Home</a></PouncyLi>
                         <PouncyLi><a href="/contact">FAQ</a></PouncyLi>
                         <PouncyLi><a href="/press">Rentals</a></PouncyLi>
+                        <PouncyLi><a href="/press">Props</a></PouncyLi>
                         <PouncyLi><a href="/press">Booking</a></PouncyLi>
                     </PouncyUl>
                 </PouncyNav>
