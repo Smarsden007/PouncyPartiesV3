@@ -31,14 +31,9 @@ export const ServiceSection = (
                             </ServiceDesc>
                         </RightDiv>
                     </SubServiceDiv>
-
                 }
-
-
             })}
-
         </ServiceMaster>
-
     )
 }
 
