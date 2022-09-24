@@ -1,9 +1,11 @@
-import { NavBar } from "./components/NavBar";
+import { HeroSection } from "./components/HeroSection";
+import { ServiceSection } from "./components/ServiceSection";
 
 function App() {
   return (
     <div className="App">
-     <NavBar />
+     <HeroSection />
+     <ServiceSection/>
     </div>
   );
 }
