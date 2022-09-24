@@ -33,7 +33,7 @@ flex-direction: column;
 `
 
 export const HeroButton = styled.button`
-width: 10rem;
+width: 15rem;
 height: 5rem;
 font-size: 2rem;
 color: white;
