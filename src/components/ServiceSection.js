@@ -1,21 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
-import image from './../media/homepage/hprow1.png';
+import {servicesData} from '../data/servicesData.js'
+export const ServiceSection = (
 
-export const ServiceSection = () => {
+) => {
     return (
         <ServiceMaster>
-            <SubServiceDiv>
+            {servicesData.map((el, index) => (
+            <SubServiceDiv key={index}>
                 <LeftDiv>
-                    <SerivceImg src={image} />
+                    <SerivceImg src={el.imgClass} />
 
                 </LeftDiv>
                 <RightDiv>
-                    <ServiceTitle>THIS AIN'T YOUR NORMAL BOUNCE HOUSE COMPANY</ServiceTitle>
-                    <ServiceDesc>Out with the old in with the new, forgot about the ugly old bounce houses your used too. We offer customizable bounce houses for every event, custom balloon arangemnets, set-up from start to finish leaving you only to worry about the party!
+                    <ServiceTitle>{el.title}</ServiceTitle>
+                    <ServiceDesc>{el.desc}<ServiceDesc>{el.desc2}</ServiceDesc><ServiceDesc>{el.desc3}</ServiceDesc>
                     </ServiceDesc>
                 </RightDiv>
-            </SubServiceDiv>
+            </SubServiceDiv>					
+            ))}
+
         </ServiceMaster>
         
     )
@@ -23,7 +27,7 @@ export const ServiceSection = () => {
 
 export const ServiceMaster = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: space-around;
 padding: 5rem;
 @media only screen and (min-width: 768px) {
@@ -102,7 +106,7 @@ padding: 1rem;
 `
 
 export const SerivceImg = styled.img`
-width: clamp(400px, 80vw, 900px);
+width: clamp(400px, 50vw, 900px);
 height: clamp(500px, 40vh, 300px);
 
 `
@@ -116,4 +120,5 @@ margin: 0rem;
 export const ServiceDesc = styled.h2`
 font-size: clamp(1rem, 1.5vw, 2rem); 
 font-weight: 300;
+padding: 0.25rem;
 `
