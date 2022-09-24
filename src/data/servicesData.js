@@ -17,8 +17,8 @@ export const servicesData = [
         reverse: 1,
 	},
 	{
-		title: 'Build Your Brand',
-		desc: '9',
+		title: 'DON’T WORRY, WE’VE GOT YOU GOT YOU COVERED...',
+		desc: 'We offer in-house photography (starting at $250) and balloon services (starting at $25/ft).',
 		imgClass:  {Img3},
 	},
 

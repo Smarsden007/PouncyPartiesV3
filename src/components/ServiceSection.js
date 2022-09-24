@@ -1,43 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
-import {servicesData} from '../data/servicesData.js'
+import { servicesData } from '../data/servicesData.js'
 export const ServiceSection = (
-reverse
+    reverse
 ) => {
     return (
         <ServiceMaster>
-            {servicesData.map((service) =>{
+            {servicesData.map((service) => {
                 console.log(servicesData)
-                if(service.reverse === 1){
+                if (service.reverse === 1) {
                     return <SubServiceDiv reverse={reverse}>
-                    <LeftDiv>
-                        <SerivceImg src={service.imgClass} />
-                    </LeftDiv>
-                    <RightDiv>
-                        <ServiceTitle>{service.title}</ServiceTitle>
-                        <ServiceDesc>{service.desc}<ServiceDesc>{service.desc2}</ServiceDesc><ServiceDesc>{service.desc3}</ServiceDesc>
-                        </ServiceDesc>
-                    </RightDiv>
-                </SubServiceDiv>
+                        <LeftDiv>
+                            <SerivceImg src={service.imgClass} />
+                        </LeftDiv>
+                        <RightDiv>
+                            <ServiceTitle style={{textAlign:'right'}}>{service.title}</ServiceTitle>
+                            <ServiceDesc style={{textAlign:'right'}}>{service.desc}</ServiceDesc>
+                            <ServiceDesc style={{textAlign:'right'}}>{service.desc2}</ServiceDesc>
+                            <ServiceDesc style={{textAlign:'right'}}>{service.desc3}</ServiceDesc>
+                        </RightDiv>
+                    </SubServiceDiv>
                 } else {
-                    return  <SubServiceDiv>
-                    <LeftDiv>
-                        <SerivceImg src={service.imgClass} />
-                    </LeftDiv>
-                    <RightDiv>
-                        <ServiceTitle>{service.title}</ServiceTitle>
-                        <ServiceDesc>{service.desc}<ServiceDesc>{service.desc2}</ServiceDesc><ServiceDesc>{service.desc3}</ServiceDesc>
-                        </ServiceDesc>
-                    </RightDiv>
-                </SubServiceDiv>
+                    return <SubServiceDiv>
+                        <LeftDiv>
+                            <SerivceImg src={service.imgClass} />
+                        </LeftDiv>
+                        <RightDiv>
+                            <ServiceTitle>{service.title}</ServiceTitle>
+                            <ServiceDesc>{service.desc}<ServiceDesc>{service.desc2}</ServiceDesc><ServiceDesc>{service.desc3}</ServiceDesc>
+                            </ServiceDesc>
+                        </RightDiv>
+                    </SubServiceDiv>
 
                 }
-                
-            					
-})}
+
+
+            })}
 
         </ServiceMaster>
-        
+
     )
 }
 
@@ -64,6 +65,7 @@ export const SubServiceDiv = styled.div`
 display: flex;
 flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
 justify-content: center;
+padding: 2rem;
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
 }
@@ -85,14 +87,14 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: left;
-padding: 3rem;
+padding: 2rem;
 margin-top: 3rem;
 width: 50%;
 width: clamp(400px, 80vw, 600px);
 height: clamp(200px, 70vh, 300px);
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 
 @media only screen and (max-width: 767px) {
