@@ -119,8 +119,8 @@ padding: 1rem;
 `
 
 export const SerivceImg = styled.img`
-width: clamp(400px, 50vw, 900px);
-height: clamp(500px, 40vh, 300px);
+width: clamp(300px, 60vw, 900px);
+height: clamp(200px, 50vh, 800px);
 
 `
 export const ServiceTitle = styled.h1`
