@@ -1,20 +1,65 @@
 import React from 'react'
 import photo from '../media/logos/logo.png'
+import styled from "styled-components";
 
 
 export const NavBar = () => {
     return (
-        <div className='flex flex-row'>
-            <img className='p-10' src={photo} />
-            <nav>
-                <ul className='flex flex-row p-18'>
-                    <li className='pt-20 px-10 text-4xl font-thin '><a href="/about">Home</a></li>
-                    <li className='pt-20 px-10 text-4xl font-thin '><a href="/contact">FAQ</a></li>
-                    <li className='pt-20 px-10 text-4xl font-thin '><a href="/press">Rentals</a></li>
-                    <li className='pt-20 px-10 text-4xl font-thin '><a href="/press">Book Now</a></li>
-                </ul>
-            </nav>
+        <NavMasterDiv>
+            <LogoDiv>
+                <img style={{ padding: '2rem', width: '20rem' }} src={photo} alt='img' />
+            </LogoDiv>
+            <NavDiv>
+                <PouncyNav>
+                    <PouncyUl>
+                        <PouncyLi><a href="/about">Home</a></PouncyLi>
+                        <PouncyLi><a href="/contact">FAQ</a></PouncyLi>
+                        <PouncyLi><a href="/press">Rentals</a></PouncyLi>
+                        <PouncyLi><a href="/press">Booking</a></PouncyLi>
+                    </PouncyUl>
+                </PouncyNav>
+            </NavDiv>
 
-        </div>
+        </NavMasterDiv>
     )
 }
+
+
+export const NavMasterDiv = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+`
+export const LogoDiv = styled.div`
+margin: 1rem;
+display: block;
+
+`
+
+export const NavDiv = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+width: 60%;
+
+`
+export const PouncyNav = styled.nav`
+display: block;
+flex-direction: row;
+justify-content: flex-end;
+width: 60%;
+padding-top: 2rem;
+`
+
+export const PouncyUl = styled.ul`
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+padding: 1rem;
+`
+
+export const PouncyLi = styled.li`
+padding: 2rem;
+font-size: clamp(1rem, 2.5vw, 2rem); 
+font-weight: 100;
+`
