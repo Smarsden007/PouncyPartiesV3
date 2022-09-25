@@ -7,7 +7,6 @@ export const ServiceSection = (
     return (
         <ServiceMaster>
             {servicesData.map((service) => {
-                console.log(servicesData)
                 if (service.reverse === 1) {
                     return <SubServiceDiv reverse={reverse}>
                         <LeftDiv>
@@ -89,7 +88,7 @@ width: clamp(400px, 80vw, 600px);
 height: clamp(200px, 70vh, 300px);
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 
 @media only screen and (max-width: 767px) {
@@ -121,10 +120,22 @@ padding: 1rem;
 export const SerivceImg = styled.img`
 width: clamp(300px, 60vw, 900px);
 height: clamp(200px, 50vh, 800px);
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
 
+@media only screen and (max-width: 767px) {
+    /* phones */
+    justify-content: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
 `
 export const ServiceTitle = styled.h1`
-font-size: clamp(1rem, 3.5vw, 6rem); 
+font-size: clamp(1rem, 2.5vw, 6rem); 
 font-weight: 100;
 padding: 0rem;
 margin: 0rem;
