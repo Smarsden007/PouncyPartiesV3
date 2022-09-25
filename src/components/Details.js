@@ -41,7 +41,7 @@ grid-row-gap: 5rem;
 		grid-row-gap: 2rem;
 	}
 	@media screen and (max-width: 568px) {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 	}
 `;
 
@@ -75,7 +75,26 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
  
     &:hover {
   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+ 
 }
+@media only screen and (min-width: 1038px) {
+    /* tablets and desktop */
+  
+    
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    width: 40vw;
+    
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
+@media screen and (max-width: 568px) {
+		width: 80vw;
+	}
 `
 
 export const DetailsTitle = styled.h2`
