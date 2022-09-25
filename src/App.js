@@ -1,3 +1,4 @@
+import { Details } from "./components/Details";
 import { HeroSection } from "./components/HeroSection";
 import { ServiceSection } from "./components/ServiceSection";
 
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
      <HeroSection />
      <ServiceSection/>
+     <Details />
     </div>
   );
 }
