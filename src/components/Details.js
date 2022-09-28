@@ -39,6 +39,7 @@ grid-row-gap: 5rem;
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 2rem;
+        
 	}
 	@media screen and (max-width: 568px) {
 		grid-template-columns: repeat(1, 1fr);
@@ -77,9 +78,9 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
  
 }
-@media only screen and (min-width: 1038px) {
+@media only screen and (max-width: 1100px) {
     /* tablets and desktop */
-  
+  width: 40vw;
     
 }
 

@@ -1,0 +1,89 @@
+.galsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70vw;
+  }
+  .galmaster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .galminimaster {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .img1row1 {
+    background-image: url("./../media/herogallery/row1img1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 60vh;
+    margin: 1rem;
+    background-repeat: no-repeat;
+  }
+  
+  .img2row1 {
+    background-image: url("./../media/herogallery/row1img2.png");
+    background-size: cover;
+    width: 50vw;
+    height: 56vh;
+    margin: 1rem;
+  }
+  
+  .img3row1 {
+    background-image: url("./../media/herogallery/row1img3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 60vh;
+    margin: 1rem;
+  }
+  
+  .img1row2 {
+    background-image: url("./../media/herogallery/row2img1.png");
+    background-size: cover;
+    width: 50vw;
+    height: 56vh;
+    margin: 1rem;
+  }
+  
+  .img2row2 {
+    background-image: url("./../media/herogallery/row2img2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 60vh;
+    margin: 1rem;
+  }
+  
+  .img3row2 {
+    background-image: url("./../media/herogallery/row2img3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20vw;
+    height: 60vh;
+    margin: 1rem;
+    padding: 3rem;
+  }
+  
+  @media (max-width: 480px) {
+    .galminimaster {
+      height: 20vh;
+    }
+    .img2row1 {
+      height: 14vh;
+    }
+    .img1row2 {
+      height: 14vh;
+    }
+  }
