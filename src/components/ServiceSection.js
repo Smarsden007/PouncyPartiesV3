@@ -120,6 +120,7 @@ padding: 1rem;
 export const SerivceImg = styled.img`
 width: clamp(300px, 60vw, 900px);
 height: clamp(200px, 50vh, 800px);
+object-fit: cover;
 @media only screen and (min-width: 768px) {
     /* tablets and desktop */
 }
