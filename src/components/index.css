@@ -1,5 +1,101 @@
-.custom-tab .tab-content {
-    min-height: 100px;
-    border: 1px solid #dcdcdc;
-    border-top: none;
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: none;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 20vw;
+    background-color: white;
+    margin: 100px auto 0;
+    margin-bottom:10rem;
+    word-break: break-all;
+    border: 1px #E6BEAE;;
+    border-radius: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .bloc-tabs {
+    display: flex;
+  }
+  .tabs {
+  
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    background: rgba(128, 128, 128, 0.075);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+    border-radius: .5rem .5rem 0rem 0rem;
+    box-sizing: content-box;
+    position: relative;
+    outline: none;
+  }
+  .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .active-tabs  {
+    background:#E6BEAE;;
+    ;
+    border-bottom: 1px solid transparent;
+    color: white;
+  }
+  
+  .active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 5px;
+    border-radius:  1rem;    
+  }
+  
+  p {
+    color: white;
+    font-weight: 100;
+  }
+  
+  button {
+    border: none;
+    
+  }
+  .content-tabs {
+    flex-grow : 1;
+  }
+  .content {
+    background: #E6BEAE;;
+    ;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .content h2 {
+    padding: 0px 0 5px 0px;
+  }
+  .content hr {
+    width: 100px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+  }
+  .content p {
+    width: 100%;
+    height: 100%;
+  }
+  .active-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
