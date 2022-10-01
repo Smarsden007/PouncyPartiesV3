@@ -17,14 +17,17 @@
     word-break: break-all;
     border: 1px #E6BEAE;;
     border-radius: .5rem;
-
   }
-  
+  @media only screen and (max-width: 767px) {
+   .container{
+    margin: 60px 2rem 0;
+   }
+}
   .bloc-tabs {
     display: flex;
   }
   .tabs {
-    font-size: clamp(1.25rem, 2.5vw, 2rem); 
+    font-size: clamp(1rem, 2.5vw, 2rem); 
     text-align: center;
     width: 50%;
     background: rgba(128, 128, 128, 0.075);
