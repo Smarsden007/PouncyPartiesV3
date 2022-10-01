@@ -6,6 +6,7 @@ import test2 from './../media/icons8-balloon-arch-100.png'
 import test3 from './../media/icons8-sticker-100.png'
 import test4 from './../media/icons8-decorations-100.png'
 import test5 from './../media/icons8-photographer-100.png'
+import { ServiceMaster } from "./ServiceSection";
 
 
 
@@ -17,6 +18,7 @@ function Tabs() {
     };
 
     return (
+        <ServiceMaster>
         <div className="container">
             <div className="bloc-tabs">
                 <button
@@ -110,6 +112,7 @@ function Tabs() {
                 </div>
             </div>
         </div>
+        </ServiceMaster>
     );
 }
 
@@ -131,6 +134,18 @@ font-size: 1.5rem;
 export const RowDiv = styled.div`
 display: flex;
 flex-direction: row;
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
 `
 
 export const ColDiv = styled.div`
