@@ -1,4 +1,5 @@
 import { Details } from "./components/Details";
+import { Footer } from "./components/Footer";
 import GallerySection from "./components/GallerySection";
 import { HeroSection } from "./components/HeroSection";
 import { ServiceSection } from "./components/ServiceSection";
@@ -12,6 +13,7 @@ function App() {
      <ServiceSection/>
      <Details />
      <GallerySection />
+     <Footer/>
     </div>
   );
 }
