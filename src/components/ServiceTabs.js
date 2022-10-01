@@ -1,6 +1,8 @@
 import React from "react";
 import Tab from "./Tab";
 import styled from "styled-components";
+
+import { SecondDiv } from "./Tab";
 const tabContent = [
   {
     title: "Pouncers",
@@ -41,10 +43,10 @@ const SimpleTabs = () => {
     <>
 
 
-      <div className="row">
+      <div className="row1">
         <div className="col text-center">
           <h2>Our Services</h2>
-          <div>
+          <SecondDiv>
             <Tab>
               {tabContent.map((tab, idx) => (
                 <Tab.TabPane key={`Tab-${idx}`} tab={tab.title}>
@@ -52,7 +54,7 @@ const SimpleTabs = () => {
                 </Tab.TabPane>
               ))}
             </Tab>
-          </div>
+            </SecondDiv>
         </div>
       </div>
     </>

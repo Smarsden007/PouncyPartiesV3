@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-// import "./index.css";
+import "./index.css";
 
 const Tab = ({ children, active = 0 }) => {
   const [activeTab, setActiveTab] = useState(active);
@@ -24,34 +24,36 @@ const Tab = ({ children, active = 0 }) => {
   }, [children]);
 
   return (
+    <MasterDiv>
     <TabMasterDiv>
         
-      <ul className="nav nav-tabs">
+      <ul style={{display:'flex', flexDirection:'row', paddingBottom: '1rem'}}>
         {tabsData.map(({ tab }, idx) => (
             
-          <li className="nav-item">
-            <a
+          <li style={{padding:'1rem'}}>
+            <TabA
               className={`nav-link ${idx === activeTab ? "active" : ""}`}
               href="test"
               onClick={() => setActiveTab(idx)}
             >
               {tab}
-            </a>
+            </TabA>
           </li>
           
         ))}
       </ul>
       
 
-      <div className="tab-content p-3">
+      <SecondDiv>
         {tabsData[activeTab] && tabsData[activeTab].children}
-      </div>
+      </SecondDiv>
     </TabMasterDiv>
+    </MasterDiv>
   );
 };
 
 const TabPane = ({ children }) => {
-  return { children };
+  return <SecondDiv>{ children }</SecondDiv>;
 };
 
 Tab.TabPane = TabPane;
@@ -62,4 +64,26 @@ export const TabMasterDiv = styled.div`
 display: flex;
 flex-direction: column;
 background-color: #E6BEAE;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+border-radius: 1rem;
+width: 80vw;
+`
+export const SecondDiv = styled.div`
+display: flex;
+flex-direction: flex-start;
+`
+export const MasterDiv = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100vw;
+`
+
+export const TabA = styled.a`
+color: pink;
+background-color: white;
+&:hover {
+    background-color: white;
+    color: #E6BEAE;
+}
 `
