@@ -1,6 +1,7 @@
 import React from 'react'
 import photo from '../media/logos/logo.png'
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 //changes last made on 09/23 V1
 
@@ -13,8 +14,8 @@ export const NavBar = () => {
             <NavDiv>
                 <PouncyNav>
                     <PouncyUl>
-                        <PouncyLi><a href="/about">Home</a></PouncyLi>
-                        <PouncyLi><a href="/contact">FAQ</a></PouncyLi>
+                        <PouncyLi><Link to="/FAQ-placeholder">Home</Link></PouncyLi>
+                        <PouncyLi><Link to="/FAQ-placeholder">FAQ</Link></PouncyLi>
                         <PouncyLi><a href="/press">Rentals</a></PouncyLi>
                         <PouncyLi><a href="/press">Props</a></PouncyLi>
                         <PouncyLi><a href="/press">Booking</a></PouncyLi>

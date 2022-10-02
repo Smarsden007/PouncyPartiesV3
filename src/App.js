@@ -1,19 +1,25 @@
-import { Details } from "./components/Details";
-import { Footer } from "./components/Footer";
-import GallerySection from "./components/GallerySection";
-import { HeroSection } from "./components/HeroSection";
-import { ServiceSection } from "./components/ServiceSection";
-import Tabs from "./components/Tabs";
-
+import {
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
+import { Routes } from "react-router";
+import { HomePage } from "./pages/HomePage";
+// import Navigation from './components/navigation/navBar'
+import ScrollToTop from './ScollToTop';
+import { Faq } from "./pages/Faq";
 function App() {
   return (
     <div className="App">
-     <HeroSection />
-     <Tabs />
-     <ServiceSection/>
-     <Details />
-     <GallerySection />
-     <Footer/>
+      <Router>
+     {/* <NavBar /> */}
+    <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/FAQ-placeholder" element={<Faq/>}/>
+          <Route path="/weddings-sonoma-county-bouncehouse"  />
+        </Routes>
+      </Router>
+     
     </div>
   );
 }
