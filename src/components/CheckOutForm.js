@@ -15,7 +15,7 @@ export const CheckOutForm = () => {
            } else if (selection === "6hrs"){
             e.preventDefault();
                return <TheToddler6hr />
-           }else if(selection == "8hrs"){
+           }else if(selection === "8hrs"){
             e.preventDefault();
                return <TheToddler8hr />
            } else{

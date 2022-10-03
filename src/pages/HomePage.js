@@ -6,6 +6,7 @@ import HomeGallery from '../components/GallerySection'
 import { PayPalCheckOut2, TheToddler4hr } from '../components/PayPalCheckOut'
 import { ServiceSection } from '../components/ServiceSection'
 import Tabs from '../components/Tabs'
+import TestComp from '../components/TestComp'
 import {HeroSection} from './../components/HeroSection'
 export const HomePage = () => {
   return (
