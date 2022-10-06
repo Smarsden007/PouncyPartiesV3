@@ -1,85 +1,97 @@
 import { useState } from "react";
 import "./index.css";
 import styled from "styled-components";
-import test from './../media/icons8-castle-66.png'
-
-import { TheCastle8hr } from "./PayPalCheckOut";
-import TestComp from "./TestComp";
-
+import Calendly from "./Calendy";
+import { TheCastleCheckout } from "./TheCastleCheckout";
 
 
 function CastleRental() {
-    const [toggleState, setToggleState] = useState(2);
+    const [toggleState, setToggleState] = useState(1);
+    const [isShown, setIsShown] = useState(false);
+    const [isShown2, setIsShown2] = useState(false);
+    const [isShown3, setIsShown3] = useState(false);
 
+
+
+    const handleClick = event => {
+        setIsShown(current => !current);
+
+    };
+    const handleClick2 = event => {
+        setIsShown2(current => !current);
+
+    };
+    const handleClick3 = event => {
+        setIsShown3(current => !current);
+    };
     const toggleTab = (index) => {
         setToggleState(index);
     };
 
     return (
-            <div className="container">
-                <h1>The Classic Castle</h1>
-                <div className="bloc-tabs">
-                    <button
-                        style={{ fontWeight: '100' }}
-                        className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-                        onClick={() => toggleTab(1)}
-                    >
-                        Toddler
-                    </button>
-                    <button style={{ fontWeight: '100'}}
-                        className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-                        onClick={() => toggleTab(2)}
-                    >
-                        Classic Castle
-                    </button>
-                    <button
-                        style={{ fontWeight: '100'}}
-                        className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
-                        onClick={() => toggleTab(3)}
-                    >
-                        Bastille
-                    </button>
+        <div className="container">
+            
+            <div className="bloc-tabs">
+                <button
+                    style={{ fontWeight: '100' }}
+                    className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+                    onClick={() => toggleTab(1)}>
+                    Step 1.
+                </button>
+                <button style={{ fontWeight: '100' }}
+                    className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+                    onClick={() => toggleTab(2)}>
+                    Step 2.
+                </button>
+                <button
+                    style={{ fontWeight: '100' }}
+                    className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
+                    onClick={() => toggleTab(3)}>
+                    Step 3.
+                </button>
+            </div>
+
+            <div className="content-tabs">
+                <div
+                    className={toggleState === 1 ? "content  active-content" : "content"}>
+                    <h1 style={{ fontSize: '2rem', fontWeight: '100', color: 'white', padding: '3rem 3rem 0rem 3rem' }}>Book your bouncer below then continue to step 2 to pay for your rental!</h1>
+                    <Calendly />
                 </div>
+                <div
+                    className={toggleState === 2 ? "content  active-content" : "content"}>
+                    <ColDiv>
+                        <p style={{ padding: '1.5rem', fontSize: '2rem' }}>Click on your reserved bouncer below!</p>
+                        <p style={{ padding: '1.5rem', fontSize: '1rem' }}>If a booking mistake is made or availability is incorrect we will be reaching out to you!</p>
 
-                <div className="content-tabs">
-                    <div
-                        className={toggleState === 1 ? "content  active-content" : "content"}
-                    > <img  alt='icon-castle' src={test} style={{ width: '7rem' }} />
-                        <h2 style={{ color: 'white', fontWeight: '200', fontSize: '2rem' }}>Our Inventory</h2>
-                        <p style={{ textAlign: 'center', width: '50%' }} >
-                            We currently offer 3 style options and 2 different sizes. We have our Classic Castle and the Bastille that measures 13' in width and 13' in length. In addition to these we also have The Toddler which is 8' in width and 8' in length with a netting surrounding to keep an eye on the little ones.
-                        </p>
-                        <TheCastle8hr />
-                    </div>
-
-
-{/* start of new row */}
-                    <div
-                        className={toggleState === 2 ? "content  active-content" : "content"}
-                    >
-                        <ColDiv>
-                        <RowDiv style={{padding:'3rem'}}>
-                            <ColDiv style={{width: '30vw', padding: '1rem'}}>
-                            <h1 style={{fontSize:'3rem', fontWeight: '100', color: 'white'}} >The Classic Castle</h1>
-                            <p>total 1</p>
-                            <p> We currently offer 3 style options and 2 different sizes. We have our Classic Castle and the Bastille that measures 13' in width and 13' in length. In addition to these we also have The Toddler which is 8' in width and 8' in length with a netting surrounding to keep an eye on the little ones.</p>
-                            </ColDiv>
-                            <TestComp />
-                        </RowDiv>
-                        </ColDiv>
-                    </div>
-
-
-
-
-
-                    <div
-                        className={toggleState === 3 ? "content  active-content" : "content"}
-                    >
-                       
-                    </div>
+                        <button onClick={handleClick} style={{ margin: '1rem', borderRadius: '1rem', backgroundColor: 'white', fontSize: '2rem', fontWeight: '100', color: 'black', padding: '1rem' }}>Toddler</button>
+                    </ColDiv>
+                    {isShown && (
+                        <TheCastleCheckout />
+                    )}
+                    <RowDiv>
+                    <ColDiv>
+                        <button onClick={handleClick2} style={{ borderRadius: '1rem', backgroundColor: 'white', fontSize: '2rem', fontWeight: '100', color: 'black', padding: '1rem', margin: '1rem' }}>Classic Castle</button>
+                    </ColDiv>
+                    {isShown2 && (
+                        <TheCastleCheckout />
+                    )}
+                    </RowDiv>
+                    <ColDiv>
+                        <button onClick={handleClick3} style={{ borderRadius: '1rem', backgroundColor: 'white', fontSize: '2rem', fontWeight: '100', color: 'black', padding: '1rem', margin: '1rem' }}>Bastille</button>
+                    </ColDiv>
+                    {isShown3 && (
+                        <TheCastleCheckout />
+                    )}
+                </div>
+                <div
+                    className={toggleState === 3 ? "content  active-content" : "content"}>
+                    <button onClick={handleClick}>test</button>
+                    {isShown && (
+                        <p>test</p>
+                    )}
                 </div>
             </div>
+        </div>
     );
 }
 

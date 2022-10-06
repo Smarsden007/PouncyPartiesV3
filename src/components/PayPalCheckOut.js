@@ -69,7 +69,7 @@ export const TheCastle4hr = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $200.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $200.00</h2>
 
                 <PayPalButtons style={{
                     color: "white",
@@ -99,7 +99,7 @@ export const TheCastle6hr = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $300.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $300.00</h2>
 
                 <PayPalButtons style={{
                     color: "white",
@@ -128,7 +128,7 @@ export const TheCastle8hr = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $400.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $400.00</h2>
 
                 <PayPalButtons style={{
                     color: "white",
@@ -161,8 +161,7 @@ export const TheCastle4hrHalf = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $375.00</h2>
-
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: <span style={{color:'black'}}>$375.00 </span> + Taxes</h2>
                 <PayPalButtons style={{
                     color: "white",
                     layout: "vertical",
@@ -193,7 +192,7 @@ export const TheCastle6hrHalf = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $475.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $475.00</h2>
 
                 <PayPalButtons style={{
                     color: "white",
@@ -225,7 +224,7 @@ export const TheCastle8hrHalf = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $575.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $575.00</h2>
 
                 <PayPalButtons style={{
                     color: "white",
@@ -259,7 +258,7 @@ export const TheCastle4hrFull = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $425.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $425.00</h2>
 
                 <PayPalButtons style={{
                     color: "white",
@@ -291,7 +290,7 @@ export const TheCastle6hrfull = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $525.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $525.00</h2>
 
                 <PayPalButtons style={{
                     color: "white",
@@ -323,7 +322,7 @@ export const TheCastle8hrfull = () => {
     return (
         <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '1rem', fontWeight: '100', color: 'white' }}>Total: $625.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $625.00</h2>
 
                 <PayPalButtons style={{
                     color: "white",

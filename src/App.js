@@ -7,6 +7,7 @@ import { HomePage } from "./pages/HomePage";
 // import Navigation from './components/navigation/navBar'
 import ScrollToTop from './ScollToTop';
 import { Faq } from "./pages/Faq";
+import { PouncyPay } from "./pages/PouncyPay";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/FAQ-placeholder" element={<Faq/>}/>
           <Route path="/weddings-sonoma-county-bouncehouse"  />
+          <Route path="/pay" element={<PouncyPay />}  />
+
         </Routes>
       </Router>
      

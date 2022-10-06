@@ -1,12 +1,11 @@
 // import "./styles.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TheCastle4hr, TheCastle8hr, TheCastle6hr, TheCastle4hrHalf, TheCastle6hrHalf, TheCastle8hrHalf, TheCastle4hrFull, TheCastle6hrfull, TheCastle8hrfull } from "./PayPalCheckOut";
 
 export default function TestComp() {
 
-    const [bouncer, setBouncer] = useState(null);
-
-    function getBouncerDiv() {
+    const [activeStuff, setActiveStuf]  = useState(<p style={{color:'white', padding: '2rem', width: '20vw'}}>Please make a selection</p>)
+    function getBouncerDiv(bouncer) {
         switch (bouncer) {
             case "0":
                 return <TheCastle4hr />;
@@ -33,31 +32,32 @@ export default function TestComp() {
     return (
         <div className="App">
             <>
-                <div ><form>
-                    <div style={{ display: 'flex', flexDirection: 'column', padding: '2rem' }}>
-                        <label htmlFor="tipoId" style={{ fontSize: '2rem', fontWeight: '100', color: 'white'}}>
-                            Select Package
-                        </label>
-                        <select style={{ padding: '1rem', width:'20vw'}} onClick={(event) => {
-                            setBouncer(event.target.value);
-                        }}>
-                            <option value="0" selected>4hr</option>
-                            <option value="1" selected>6hr</option>
-                            <option value="2">8hr</option>
-                            <option value="3">4hr w/ Half Balloon Arch</option>
-                            <option value="4">6hr w/ Half Balloon Arch</option>
-                            <option value="5">8hr w/ Half Balloon Arch</option>
-                            <option value="6">4hr w/ Full Balloon Arch</option>
-                            <option value="7">6hr w/ Full Balloon Arch</option>
-                            <option value="8">8hr w/ Full Balloon Arch</option>
-                        </select>
-                    </div>
+                <div>
+                    <form>
+                        <div style={{ display: 'flex', flexDirection: 'column', padding: '2rem' , marginTop:'4rem'}}>
+                            <label htmlFor="tipoId" style={{ fontSize: '2rem', fontWeight: '100', color: 'white' }}>
+                                Select Package
+                            </label>
+                            <select style={{ padding: '1rem', width: '20vw' }} onChange={ (event) => {
+                                setActiveStuf(getBouncerDiv(event.target.value))
+                            }}>
+                                <option value="0" selected>4hr ($200)</option>
+                                <option value="1" selected>6hr ($300)</option>
+                                <option value="2">8hr ($400)</option>
+                                <option value="3">4hr w/ Half Balloon Arch ($375)</option>
+                                <option value="4">6hr w/ Half Balloon Arch ($475)</option>
+                                <option value="5">8hr w/ Half Balloon Arch ($575)</option>
+                                <option value="6">4hr w/ Full Balloon Arch ($425)</option>
+                                <option value="7">6hr w/ Full Balloon Arch ($525)</option>
+                                <option value="8">8hr w/ Full Balloon Arch ($625)</option>
+                            </select>
+                        </div>
 
-                </form>
+                    </form>
 
                 </div>
 
-                {getBouncerDiv()}
+                {activeStuff}
             </>
         </div>
     )

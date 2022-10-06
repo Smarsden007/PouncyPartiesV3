@@ -1,4 +1,6 @@
 import React from 'react'
+import Calendly from '../components/Calendy'
+import Calendy2 from '../components/Calendy2'
 import CastleRental from '../components/CastleRental'
 import { CheckOutForm } from '../components/CheckOutForm'
 import { Details } from '../components/Details'
