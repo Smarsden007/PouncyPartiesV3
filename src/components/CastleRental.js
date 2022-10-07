@@ -97,6 +97,7 @@ function CastleRental() {
 
 export default CastleRental;
 
+
 export const CTAButton = styled.button`
 background-color: white;
 border-radius: 0.5rem;
@@ -109,7 +110,6 @@ font-size: 1.5rem;
     color: #E6BEAE;
 }
 `
-
 export const RowDiv = styled.div`
 display: flex;
 flex-direction: row;
@@ -127,7 +127,6 @@ flex-direction: row;
     /* portrait phones */
 }
 `
-
 export const ColDiv = styled.div`
 display: flex;
 flex-direction: column;
