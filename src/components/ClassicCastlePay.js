@@ -6,7 +6,7 @@ import { TheCastleCheckout } from "./TheCastleCheckout";
 
 export const ClassicCastlePay = () => {
     const [toggleState, setToggleState] = useState(1);
-     return (
+    return (
         <div className="container">
             <div className="content-tabs">
                 <div
