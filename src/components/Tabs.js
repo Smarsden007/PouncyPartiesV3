@@ -6,7 +6,6 @@ import test2 from './../media/icons8-balloon-arch-100.png'
 import test3 from './../media/icons8-sticker-100.png'
 import test4 from './../media/icons8-decorations-100.png'
 import test5 from './../media/icons8-photographer-100.png'
-import { ServiceMaster } from "./ServiceSection";
 
 
 
@@ -45,7 +44,7 @@ function Tabs() {
                 <div className="content-tabs">
                     <div
                         className={toggleState === 1 ? "content  active-content" : "content"}
-                    > <img src={test} style={{ width: '7rem' }} />
+                    > <img alt='img' src={test} style={{ width: '7rem' }} />
                         <h2 style={{ color: 'white', fontWeight: '200', fontSize: '2rem' }}>Our Inventory</h2>
                         <p style={{ textAlign: 'center', width: '50%' }} >
                             We currently offer 3 style options and 2 different sizes. We have our Classic Castle and the Bastille that measures 13' in width and 13' in length. In addition to these we also have The Toddler which is 8' in width and 8' in length with a netting surrounding to keep an eye on the little ones.
@@ -59,7 +58,7 @@ function Tabs() {
                     >
                         <RowDiv>
                             <ColDiv style={{ padding: '1rem' }}>
-                                <img src={test2} style={{ width: '7rem',margin:'1rem' }} />
+                                <img alt='img' src={test2} style={{ width: '7rem',margin:'1rem' }} />
                                 <h2 style={{ color: 'white', fontWeight: '200', fontSize: '2rem' }}>Balloons</h2>
 
                                 <p style={{ textAlign: 'center' }}>
@@ -67,7 +66,7 @@ function Tabs() {
                                 </p>
                             </ColDiv>
                             <ColDiv style={{ padding: '1rem' }}>
-                                <img src={test3} style={{ width: '7rem',margin:'1rem' }} />
+                                <img  alt='img' src={test3} style={{ width: '7rem',margin:'1rem' }} />
 
                                 <h2 style={{ color: 'white', fontWeight: '200', fontSize: '2rem' }}>Vinyl Prints</h2>
 
@@ -76,7 +75,7 @@ function Tabs() {
                                 </p>
                             </ColDiv>
                             <ColDiv style={{ padding: '1rem' }}>
-                                <img src={test4} style={{ width: '7rem',margin:'1rem' }} />
+                                <img alt='img' src={test4} style={{ width: '7rem',margin:'1rem' }} />
 
                                 <h2 style={{ color: 'white', fontWeight: '200', fontSize: '2rem' }}>Back Drops</h2>
 
@@ -91,7 +90,7 @@ function Tabs() {
                     <div
                         className={toggleState === 3 ? "content  active-content" : "content"}
                     >
-                        <img src={test5} style={{ width: '7rem' ,margin:'1rem'}} />
+                        <img alt='img' src={test5} style={{ width: '7rem' ,margin:'1rem'}} />
 
                         <h2 style={{ color: 'white', fontWeight: '200', fontSize: '2rem' }}>Meet Our Photographer</h2>
 

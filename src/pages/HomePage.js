@@ -1,5 +1,6 @@
 import React from 'react'
 import CastleRental from '../components/CastleRental'
+import Checkout1 from '../components/Checkouts'
 import { Details } from '../components/Details'
 import HomeGallery from '../components/GallerySection'
 import { ServiceSection } from '../components/ServiceSection'
@@ -9,6 +10,7 @@ export const HomePage = () => {
   return (
     <div>
         <HeroSection />
+        <Checkout1 />
         <CastleRental />
         <Tabs />
         <ServiceSection />

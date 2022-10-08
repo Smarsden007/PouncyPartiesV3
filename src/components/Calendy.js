@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { InlineWidget, useCalendlyEventListener } from 'react-calendly';
+import React from 'react';
+
+import { InlineWidget } from 'react-calendly';
 
 const Calendly = () => {
    

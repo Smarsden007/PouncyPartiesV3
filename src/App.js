@@ -8,12 +8,15 @@ import { HomePage } from "./pages/HomePage";
 import ScrollToTop from './ScollToTop';
 import { Faq } from "./pages/Faq";
 import { PouncyPay } from "./pages/PouncyPay";
+import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 function App() {
   return (
     <div className="App">
       <Router>
      {/* <NavBar /> */}
     <ScrollToTop />
+<PayPalScriptProvider      options={{ "client-id": process.env.REACT_APP_PAYPAL_CLIENT_ID }}
+    >
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/FAQ-placeholder" element={<Faq/>}/>
@@ -23,6 +26,7 @@ function App() {
           <Route path="/bastille-castle-pay" element={<PouncyPay />}  />
 
         </Routes>
+        </PayPalScriptProvider>
       </Router>
      
     </div>

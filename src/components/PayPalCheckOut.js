@@ -1,6 +1,5 @@
 import React from 'react'
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'
-import styled from 'styled-components'
 
 //All Check Out options for TheToddler
 
@@ -273,7 +272,7 @@ export const TheCastle4hrFull = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "3.00",
+                                    value: "00.01",
                                 },
 
                             },

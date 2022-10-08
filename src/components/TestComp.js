@@ -1,5 +1,5 @@
 // import "./styles.css";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { TheCastle4hr, TheCastle8hr, TheCastle6hr, TheCastle4hrHalf, TheCastle6hrHalf, TheCastle8hrHalf, TheCastle4hrFull, TheCastle6hrfull, TheCastle8hrfull } from "./PayPalCheckOut";
 
 export default function TestComp() {
