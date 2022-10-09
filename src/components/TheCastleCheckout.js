@@ -6,15 +6,22 @@ import castle from '../media/Classic.png'
 export const TheCastleCheckout = () => {
   return (
     <ColDiv>
-                        <RowDiv style={{ padding: '3rem' }}>
-                            <ColDiv style={{ width: '30vw', padding: '1rem' }}>
+                        <RowDiv style={{ padding: '2rem', height: 'auto' , overflowWrap: "break-a"}}>
+                            <ColDiv style={{ width: '30vw', height:'40vw', padding: '1rem' }}>
                                 <h1 style={{ fontSize: '3rem', fontWeight: '100', color: 'white' }} >The Classic Castle</h1>
-                                <img alt="productimage"style={{ borderRadius: '1rem' }} src={castle} />
-                                <p>total 1</p>
-                                <p> We currently offer 3 style options and 2 different sizes. We have our Classic Castle and the Bastille that measures 13' in width and 13' in length. In addition to these we also have The Toddler which is 8' in width and 8' in length with a netting surrounding to keep an eye on the little ones.</p>
+                                <img alt="productimage"style={{ borderRadius: '1rem' , width: '20vw'}} src={castle} />
+                                <p style={{ fontSize: '2rem'}}>Every Rental Includes:</p>
+                                <p style={{positon: 'fixed',fontSize: '1.5rem'}}>🎈Entrance Turf</p>
+                                <p style={{positon: 'fixed',fontSize: '1.5rem'}}>🎈Shoe Rack</p>
+                                <p style={{positon: 'fixed',fontSize: '1.5rem'}}>🎈Rules Sign (Customization Available)</p>
+                                <p style={{positon: 'fixed',fontSize: '1.5rem'}}>🎈Blower & 25FT Extention Cord</p>
+                                <p style={{ fontSize: '2rem'}}>Addtional Information:</p>
+                                <p style={{positon: 'fixed',fontSize: '1rem'}}>🎈Generator Available Upon Request ($50 Charge)</p>
+                                <p style={{positon: 'fixed',fontSize: '1rem'}}>🎈Free Delivery in Marin and Sonoma County</p>
                             </ColDiv>
                             <TestComp />
                         </RowDiv>
                     </ColDiv>
   )
 }
+//need to go through and make all text boxes responsive and have the entire component flex column on mobile.
