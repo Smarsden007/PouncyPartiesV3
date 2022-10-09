@@ -1,12 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 import { InlineWidget } from 'react-calendly';
 
-const Calendly = () => {
-   
-    
-    return (
-      <div style={{width:'70vw'}}>
+export const CalendlyRun = () => {
+
+  return (
+    <div style={{width:'70vw'}}>
         <InlineWidget
                 url={"https://calendly.com/hello-pouncy"}
                 
@@ -14,9 +13,6 @@ const Calendly = () => {
         
 
       </div>
-
-    );
-
+  )
 }
-    
-export default Calendly;
+
