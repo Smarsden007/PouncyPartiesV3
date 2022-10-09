@@ -37,7 +37,7 @@ export default function TestComp() {
                             <label htmlFor="tipoId" style={{ fontSize: '2rem', fontWeight: '100', color: 'white' }}>
                                 Select Package
                             </label>
-                            <select style={{ padding: '1rem', width: '20vw' }} onChange={ (event) => {
+                            <select style={{ padding: '1rem', width: '25vw' }} onChange={ (event) => {
                                 setActiveStuf(getBouncerDiv(event.target.value))
                             }}>
                                 <option value="0" selected>4hr ($200)</option>

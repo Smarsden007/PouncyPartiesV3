@@ -66,7 +66,7 @@ export const TheToddler8hr = () => {
 //Regular Rentals
 export const TheCastle4hr = () => {
     return (
-        <div style={{ width: '20vw', height: 'auto', padding: '2rem' }}>
+        <div style={{ width: '30vw', height: 'auto', padding: '2rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white',  }}>Total: $200.00</h2>
 
@@ -74,7 +74,7 @@ export const TheCastle4hr = () => {
                     color: "black",
                     layout: "vertical",
                     height: 48,
-                    width: 100,
+                    width: 200,
                     tagline: false,
                     shape: "rect"
                 }} createOrder={(data, actions) => {

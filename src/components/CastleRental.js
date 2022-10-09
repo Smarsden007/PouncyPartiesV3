@@ -1,18 +1,12 @@
 import { useState } from "react";
 import "./index.css";
 import styled from "styled-components";
-import Calendly from "./Calendy";
 import { TheCastleCheckout } from "./TheCastleCheckout";
 
 
 function CastleRental() {
     const [toggleState, setToggleState] = useState(1);
     const [isShown, setIsShown] = useState(false);
-    const [isShown2, setIsShown2] = useState(false);
-    const [isShown3, setIsShown3] = useState(false);
-
-
-
     const handleClick = event => {
         setIsShown(current => !current);
 
@@ -23,7 +17,7 @@ function CastleRental() {
     };
 
     return (
-        <div className="container">
+        <div className="container2">
             
             <div className="bloc-tabs">
                 <button
@@ -49,14 +43,12 @@ function CastleRental() {
                 <div
                     className={toggleState === 2 ? "content  active-content" : "content"}>
                     <ColDiv>
-                        <p style={{ padding: '1.5rem', fontSize: '2rem' }}>Click on your reserved bouncer below!</p>
-                        <p style={{ padding: '1.5rem', fontSize: '1rem' }}>If a booking mistake is made or availability is incorrect we will be reaching out to you!</p>
+                        <p style={{ padding: '1rem', fontSize: '2rem' }}>Question?</p>
+                        <p style={{ padding: '1rem', fontSize: '1.75rem' }}>Awnser</p>
 
-                        <button onClick={handleClick} style={{ margin: '1rem', borderRadius: '1rem', backgroundColor: 'white', fontSize: '2rem', fontWeight: '100', color: 'black', padding: '1rem' }}>Toddler</button>
+                        
                     </ColDiv>
-                    {isShown && (
-                        <TheCastleCheckout />
-                    )}
+                   
                     
                     
                 </div>

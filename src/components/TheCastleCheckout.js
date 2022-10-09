@@ -10,14 +10,14 @@ export const TheCastleCheckout = () => {
                             <ColDiv style={{ width: '30vw', height:'40vw', padding: '1rem' }}>
                                 <h1 style={{ fontSize: '3rem', fontWeight: '100', color: 'white' }} >The Classic Castle</h1>
                                 <img alt="productimage"style={{ borderRadius: '1rem' , width: '20vw'}} src={castle} />
-                                <p style={{ fontSize: '2rem'}}>Every Rental Includes:</p>
-                                <p style={{positon: 'fixed',fontSize: '1.5rem'}}>🎈Entrance Turf</p>
-                                <p style={{positon: 'fixed',fontSize: '1.5rem'}}>🎈Shoe Rack</p>
-                                <p style={{positon: 'fixed',fontSize: '1.5rem'}}>🎈Rules Sign (Customization Available)</p>
-                                <p style={{positon: 'fixed',fontSize: '1.5rem'}}>🎈Blower & 25FT Extention Cord</p>
-                                <p style={{ fontSize: '2rem'}}>Addtional Information:</p>
-                                <p style={{positon: 'fixed',fontSize: '1rem'}}>🎈Generator Available Upon Request ($50 Charge)</p>
-                                <p style={{positon: 'fixed',fontSize: '1rem'}}>🎈Free Delivery in Marin and Sonoma County</p>
+                                <p style={{ fontSize: '2rem', fontWeight: '300'}}>Every Rental Includes:</p>
+                                <p style={{paddingLeft: '1rem', positon: 'fixed',fontSize: '1.5rem'}}>🎈Entrance Turf</p>
+                                <p style={{paddingLeft: '1rem',positon: 'fixed',fontSize: '1.5rem'}}>🎈Shoe Rack</p>
+                                <p style={{paddingLeft: '1rem',positon: 'fixed',fontSize: '1.5rem'}}>🎈Rules Sign (Customization Available)</p>
+                                <p style={{paddingLeft: '1rem',positon: 'fixed',fontSize: '1.5rem'}}>🎈Blower & 25FT Extention Cord</p>
+                                <p style={{ fontSize: '2rem',  fontWeight: '300'}}>Addtional Information:</p>
+                                <p style={{paddingLeft: '1rem',positon: 'fixed',fontSize: '1rem'}}>🎈Generator Available Upon Request ($50 Charge)</p>
+                                <p style={{paddingLeft: '1rem',positon: 'fixed',fontSize: '1rem'}}>🎈Free Delivery in Marin and Sonoma County</p>
                             </ColDiv>
                             <TestComp />
                         </RowDiv>
