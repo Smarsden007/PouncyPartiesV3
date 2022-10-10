@@ -43,7 +43,7 @@ function CastleRental() {
                 <div
                     className={toggleState === 2 ? "content  active-content" : "content"}>
                     <ColDiv>
-                        <p style={{ padding: '1rem', fontSize: '2rem' }}>Question?</p>
+                        <PayP>Question?</PayP>
                         <p style={{ padding: '1rem', fontSize: '1.75rem' }}>Awnser</p>
 
                         
@@ -102,4 +102,9 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 align-content: center;
+`
+export const PayP = styled.p`
+
+font-size: (5rem, 60vw, 3rem);
+
 `

@@ -9,7 +9,9 @@ import ScrollToTop from './ScollToTop';
 import { Faq } from "./pages/Faq";
 import { PouncyPay } from "./pages/PouncyPay";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+
 function App() {
+
   return (
     <div className="App">
       <Router>
