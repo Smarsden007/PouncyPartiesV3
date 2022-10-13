@@ -1,5 +1,6 @@
 // import "./styles.css";
 import React, {  useState } from "react";
+import { PackageAdd } from "./PackageAdd";
 import { TheCastle4hr, TheCastle8hr, TheCastle6hr, TheCastle4hrHalf, TheCastle6hrHalf, TheCastle8hrHalf, TheCastle4hrFull, TheCastle6hrfull, TheCastle8hrfull } from "./PayPalCheckOut";
 
 export default function TestComp() {
@@ -7,7 +8,7 @@ export default function TestComp() {
     function getBouncerDiv(bouncer) {
         switch (bouncer) {
             case "0":
-                return <TheCastle4hr />;
+                return <TheCastle4hr /> , <PackageAdd />;
             case "1":
                 return <TheCastle6hr />;
             case "2":
@@ -23,7 +24,7 @@ export default function TestComp() {
             case "7":
                 return <TheCastle6hrfull />;
             case "8":
-                return <TheCastle8hrfull />;
+                return <div><PackageAdd /><TheCastle8hrfull /></div>;
             default:
                 return null;
         }
