@@ -20,7 +20,9 @@ export const TheCastleCheckout = () => {
                                 <RespP>🎈Generator Available Upon Request ($50 Charge)</RespP>
                                 <RespP style={{fontSize: '1rem'}}>🎈Free Delivery in Marin and Sonoma County</RespP>
                             </ColDiv>
+                            <ColDiv>
                             <TestComp />
+                          </ColDiv>
                         </RowDiv>
                     </ColDiv>
   )
