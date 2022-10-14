@@ -1,68 +1,8 @@
 import React from 'react'
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'
+import styled from "styled-components";
 
 //All Check Out options for TheToddler
-
-export const TheToddler4hr = () => {
-    return (
-        <div style={{ width: '50vw', height: '40vh' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <PayPalButtons createOrder={(data, actions) => {
-                    return actions.order.create({
-                        purchase_units: [
-                            {
-                                amount: {
-                                    value: "1.00",
-                                },
-                            },
-                        ],
-                    });
-                }} />
-            </PayPalScriptProvider>
-
-        </div>
-    )
-}
-export const TheToddler6hr = () => {
-    return (
-        <div style={{ width: '50vw', height: '40vh' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <PayPalButtons createOrder={(data, actions) => {
-                    return actions.order.create({
-                        purchase_units: [
-                            {
-                                amount: {
-                                    value: "2.00",
-                                },
-                            },
-                        ],
-                    });
-                }} />
-            </PayPalScriptProvider>
-
-        </div>
-    )
-}
-export const TheToddler8hr = () => {
-    return (
-        <div style={{ width: '50vw', height: '40vh' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <PayPalButtons createOrder={(data, actions) => {
-                    return actions.order.create({
-                        purchase_units: [
-                            {
-                                amount: {
-                                    value: "3.00",
-                                },
-                            },
-                        ],
-                    });
-                }} />
-            </PayPalScriptProvider>
-
-        </div>
-    )
-}
 //Regular Rentals
 export const TheCastle4hr = () => {
     return (
@@ -96,12 +36,12 @@ export const TheCastle4hr = () => {
 }
 export const TheCastle6hr = () => {
     return (
-        <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
+        <PayPalDiv style={{ padding: '1rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $300.00</h2>
 
                 <PayPalButtons style={{
-                    color: "white",
+                    color: "black",
                     layout: "vertical",
                     height: 48,
                     width: 200,
@@ -120,7 +60,7 @@ export const TheCastle6hr = () => {
                 }} />
             </PayPalScriptProvider>
 
-        </div>
+        </PayPalDiv>
     )
 }
 export const TheCastle8hr = () => {
@@ -349,3 +289,18 @@ export const TheCastle8hrfull = () => {
         </div>
     )
 }
+
+export const PayPalDiv = styled.div`
+width: 25vw;
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 767px) {
+    width: 60vw;
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    /* portrait phones */
+}
+`
