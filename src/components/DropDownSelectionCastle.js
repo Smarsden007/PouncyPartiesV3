@@ -1,61 +1,58 @@
 // import "./styles.css";
 import React, {  useState } from "react";
-import { PackageAdd } from "./PackageAdd";
 import { TheCastle4hr, TheCastle8hr, TheCastle6hr, TheCastle4hrHalf, TheCastle6hrHalf, TheCastle8hrHalf, TheCastle4hrFull, TheCastle6hrfull, TheCastle8hrfull } from "./PayPalCheckOut";
 import styled from "styled-components";
 
 export default function TestComp() {
     const [activeStuff, setActiveStuf]  = useState(<p style={{color:'white', padding: '2rem', width: '20vw'}}>Please make a selection</p>)
-    function getBouncerDiv(bouncer) {
-        switch (bouncer) {
-            case "0":
-                return <TheCastle4hr /> ;
-            case "1":
-                return <TheCastle6hr />;
-            case "2":
-                return <TheCastle8hr />;
-            case "3":
-                return <TheCastle4hrHalf />;
-            case "4":
-                return <TheCastle6hrHalf />;
-            case "5":
-                return <TheCastle8hrHalf />;
-            case "6":
-                return <TheCastle4hrFull />;
-            case "7":
-                return <TheCastle6hrfull />;
-            case "8":
-                return <div><PackageAdd /><TheCastle8hrfull /></div>;
-            default:
-                return null;
+    
+    
+    function CheckDropDown() {
+        if  (document.getElementById("Bouncer").value === "0"){
+            return <TheCastle4hr />
+        }else if(document.getElementById("Bouncer").value === "1" ){
+            return <TheCastle6hr />
+        }else if(document.getElementById("Bouncer").value === "2"){
+            return <TheCastle8hr />
+        }else if(document.getElementById("Bouncer").value === "0" && document.getElementById("Bouncer2").value === "0"){
+            return <TheCastle4hr />
+        }else if(document.getElementById("Bouncer").value === "1" && document.getElementById("Bouncer2").value === "1"){
+            return <TheCastle6hrHalf />
+        }else if(document.getElementById("Bouncer").value === "5"){
+            return <TheCastle8hrHalf />
+        }else if(document.getElementById("Bouncer").value === "6"){
+            return <TheCastle4hrFull />
+        }else if(document.getElementById("Bouncer").value === "7"){
+            return <TheCastle6hrfull />
+        } else{
+            return <TheCastle8hrfull />
         }
+
     }
     return (
         <div className="App">
             <>
                 <div>
                     <FormStyled>
-                        <SelectDiv>
+                        <SelectDiv onChange={ (event) => {
+                                setActiveStuf(CheckDropDown(event.target.value))
+                            }}>
                             <SelectStyled htmlFor="tipoId" >
                                 Select Package
                             </SelectStyled>
-                            <StyledSelect onChange={ (event) => {
-                                setActiveStuf(getBouncerDiv(event.target.value))
-                            }}>
+                            <StyledSelect id="Bouncer" >
                                 <option value="0" selected>4hr ($200)</option>
                                 <option value="1" >6hr ($300)</option>
                                 <option value="2">8hr ($400)</option>
+                            </StyledSelect>
+                            <StyledSelect id="Bouncer2" >
+                                <option value="0" selected>No Thank You</option>
+                                <option value="1" >6hr ($300)</option>
+                                <option value="2">8hr ($400)</option>
                                 <option value="3">4hr w/ Half Balloon Arch ($375)</option>
-                                <option value="4">6hr w/ Half Balloon Arch ($475)</option>
-                                <option value="5">8hr w/ Half Balloon Arch ($575)</option>
-                                <option value="6">4hr w/ Full Balloon Arch ($425)</option>
-                                <option value="7">6hr w/ Full Balloon Arch ($525)</option>
-                                <option value="8">8hr w/ Full Balloon Arch ($625)</option>
                             </StyledSelect>
                         </SelectDiv>
-
                     </FormStyled>
-
                 </div>
 
                 {activeStuff}

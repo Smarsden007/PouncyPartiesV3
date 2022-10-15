@@ -6,9 +6,9 @@ import styled from "styled-components";
 //Regular Rentals
 export const TheCastle4hr = () => {
     return (
-        <div style={{ width: '30vw', height: 'auto', padding: '2rem' }}>
+        <PayPalDiv style={{ padding: '1rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
-                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white',  }}>Total: $200.00</h2>
+                <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $200.00</h2>
 
                 <PayPalButtons style={{
                     color: "black",
@@ -22,16 +22,15 @@ export const TheCastle4hr = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "1.00",
+                                    value: "2.00",
                                 },
                             },
                         ],
                     });
                 }} />
-
             </PayPalScriptProvider>
 
-        </div>
+        </PayPalDiv>
     )
 }
 export const TheCastle6hr = () => {
@@ -65,12 +64,12 @@ export const TheCastle6hr = () => {
 }
 export const TheCastle8hr = () => {
     return (
-        <div style={{ width: '30vw', height: '40vh', padding: '2rem' }}>
+        <PayPalDiv style={{ padding: '1rem' }}>
             <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $400.00</h2>
 
                 <PayPalButtons style={{
-                    color: "white",
+                    color: "black",
                     layout: "vertical",
                     height: 48,
                     width: 200,
@@ -78,21 +77,18 @@ export const TheCastle8hr = () => {
                     shape: "rect"
                 }} createOrder={(data, actions) => {
                     return actions.order.create({
-
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "3.00",
+                                    value: "2.00",
                                 },
-
                             },
                         ],
                     });
                 }} />
-
             </PayPalScriptProvider>
 
-        </div>
+        </PayPalDiv>
     )
 }
 //Rental with half-arch
