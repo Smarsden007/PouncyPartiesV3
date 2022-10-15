@@ -11,3 +11,7 @@ TestComp.js soon to be renamed is the drop down function that returns the select
 CastleCheckout.js (soon to be able to hold all bouncers.) holds the above components that are returned after user fills out the form and selects a date and start time. 
 
 Calendly.js is where the booking process begins, holding instructions and the component that the user selects date, time and answers a series of questions.
+
+
+Next Component to work into check-out
+Color library form that will render if balloons are selected, if they are selected the payment option wont appear until the form is submitted.
