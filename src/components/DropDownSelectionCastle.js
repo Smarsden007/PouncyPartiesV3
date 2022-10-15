@@ -128,7 +128,6 @@ flex-direction: column;
    align-self: center;
 }
 `
-// style={{ padding: '1rem', width: '20vw' }}
 export const StyledSelect = styled.select`
 display: flex;
 flex-direction: column;

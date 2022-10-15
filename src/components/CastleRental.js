@@ -36,12 +36,12 @@ function CastleRental() {
 
             <div className="content-tabs">
                 <div
-                    className={toggleState === 1 ? "content  active-content" : "content"}>
+                    className={toggleState === 1 ? "content  active-content2" : "content"}>
                     {/* <h1 style={{ fontSize: '2rem', fontWeight: '100', color: 'white', padding: '3rem 3rem 0rem 3rem' }}>Book your bouncer below then continue to step 2 to pay for your rental!</h1> */}
                     <TheCastleCheckout />
                 </div>
                 <div
-                    className={toggleState === 2 ? "content  active-content" : "content"}>
+                    className={toggleState === 2 ? "content  active-content2" : "content"}>
                     <ColDiv>
                         <PayP>Question?</PayP>
                         <p style={{ padding: '1rem', fontSize: '1.75rem' }}>Awnser</p>
@@ -53,7 +53,7 @@ function CastleRental() {
                     
                 </div>
                 <div
-                    className={toggleState === 3 ? "content  active-content" : "content"}>
+                    className={toggleState === 3 ? "content  active-content2" : "content"}>
                     <button onClick={handleClick}>test</button>
                     {isShown && (
                         <p>test</p>
