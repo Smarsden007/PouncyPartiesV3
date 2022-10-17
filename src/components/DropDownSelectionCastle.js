@@ -2,32 +2,27 @@
 import React, { useState } from "react";
 import { TheCastle4hr, TheCastle8hr, TheCastle6hr, TheCastle4hrHalf, TheCastle6hrHalf, TheCastle8hrHalf, TheCastle4hrFull, TheCastle6hrfull, TheCastle8hrfull } from "./PayPalCheckOut";
 import styled from "styled-components";
+import { ColorSelector } from "./ColorSelector";
 
 export default function TestComp() {
     const [activeStuff, setActiveStuf] = useState(<p style={{ color: 'white', padding: '2rem', width: '20vw' }}>Please make a selection</p>)
-    const [activeStuff2, setActiveStuf2] = useState(<p style={{ color: 'white', padding: '2rem', width: '20vw' }}>Please make a selection for color</p>)
+    const [activeBalloons, setActiveBalloons] =useState(<p style={{ color: 'white', padding: '2rem', width: '20vw' }}>1</p>)
     const Bouncer = document.getElementById("Bouncer")
     const Balloons = document.getElementById("Bouncer2")
-    
-    function CheckoutValidation(){
-        if(Bouncer.value === "0" && Balloons.value === "0"){
-            //disabble button here
-        } else {
-            //enable button here
-        }
-    }
-// need to plan for color selection validation as well for button.
-    function CheckForBalloons(){
-        if(Balloons.value === "1" || "2"){
-            return <p>test</p>
+
+
+    function CheckBalloonColor(){
+        if(Balloons.value === "2"){
+            return <p>Red</p>
+        } else if(Balloons.value === "1"){
+            return <p>blue</p>
         }else{
             return <></>
         }
     }
-    
+
     function CheckDropDown() {
         if (Bouncer.value === "0" && Balloons.value === "0") {
-            console.log("##########")
             return <TheCastle4hr />
         } else if (Bouncer.value === "1" && Balloons.value === "0") {
             return <TheCastle6hr />
@@ -44,7 +39,7 @@ export default function TestComp() {
         } else if (Bouncer.value === "1" && Balloons.value === "2") {
             return <TheCastle6hrfull />
         } else if (Bouncer.value === "2" && Balloons.value === "2") {
-            return <div><p>Please Select 3 colors</p><TheCastle8hrfull /></div>
+            return <TheCastle8hrfull />
         } else {
             return <p>Make a Selection</p>
         }
@@ -54,6 +49,7 @@ export default function TestComp() {
             <>
                 <div>
                     <FormStyled>
+                        <div>
                         <SelectDiv onChange={(event) => {
                             setActiveStuf(CheckDropDown(event.target.value))
                         }}>
@@ -61,6 +57,7 @@ export default function TestComp() {
                                 Select Package
                             </SelectStyled>
                             <StyledSelect id="Bouncer" >
+                                <option selected >Please Make a Selection</option>
                                 <option value="0" >4hr ($200)</option>
                                 <option value="1" >6hr ($300)</option>
                                 <option value="2">8hr ($400)</option>
@@ -68,19 +65,16 @@ export default function TestComp() {
                             <SelectStyled htmlFor="tipoId" >
                                 Balloons
                             </SelectStyled>
-                            <StyledSelect id="Bouncer2"  onChange={(event) => {
-                            setActiveStuf2(CheckForBalloons(event.target.value))
-                        }}>
+                            <StyledSelect id="Bouncer2">
+                                <option selected >Please Make a Selection</option>
                                 <option value="0" >No Thank You</option>
                                 <option value="1" >Half Arch ($175)</option>
                                 <option value="2">Full Arch ($225)</option>
                             </StyledSelect>
-                            {activeStuff2}
                         </SelectDiv>
+                        </div>
                     </FormStyled>
-                </div> 
-                
-
+                </div>
                 {activeStuff}
             </>
         </div>
