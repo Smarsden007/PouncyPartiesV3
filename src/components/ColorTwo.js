@@ -16,10 +16,13 @@ export const ColorTwo = () => {
       }
     setvalue(val)
   }
-
+  
+  function Counter(){
+    for(let i = 0; )
+  }
   const  options  = [
-    { label:  'Option 1', value:  'option_1'  },
-    { label:  'Option 2', value:  'option_2'  },
+    { label:  'Option 1', value:  'option_1', count: 1  },
+    { label:  'Option 2', value:  'option_2', count: 1   },
     { label:  'Option 3', value:  'option_3'  },
     { label:  'Option 4', value:  'option_4'  },
   ]
