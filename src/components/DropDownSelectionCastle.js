@@ -4,29 +4,25 @@ import { TheCastle4hr, TheCastle8hr, TheCastle6hr, TheCastle4hrHalf, TheCastle6h
 import styled from "styled-components";
 
 export default function TestComp() {
-    const [activeStuff, setActiveStuf] = useState(<p style={{ color: 'white', padding: '2rem', width: '20vw' }}>Please make a selection</p>)
-    const Bouncer = document.getElementById("Bouncer")
-    const Balloons = document.getElementById("Bouncer2")
-
-
+    const [activeStuff, setActiveStuf] = useState(<p style={{ color: 'white', padding: '2.25rem', width: '20vw', fontSize: '1.25rem' }}>Make your selections and checkout with PayPal or with a Credit or Debit Card.</p>)
     function CheckDropDown() {
-        if (Bouncer.value === "0" && Balloons.value === "0") {
+        if (document.getElementById("Bouncer1").value === "0" && document.getElementById("Bouncer2").value === "0") {
             return <TheCastle4hr />
-        } else if (Bouncer.value === "1" && Balloons.value === "0") {
+        } else if (document.getElementById("Bouncer1").value === "1" && document.getElementById("Bouncer2").value === "0") {
             return <TheCastle6hr />
-        } else if (Bouncer.value === "2" && Balloons.value === "0") {
+        } else if (document.getElementById("Bouncer1").value === "2" && document.getElementById("Bouncer2").value === "0") {
             return <TheCastle8hr />
-        } else if (Bouncer.value === "0" && Balloons.value === "1") {
+        } else if (document.getElementById("Bouncer1").value === "0" && document.getElementById("Bouncer2").value === "1") {
             return <TheCastle4hrHalf />
-        } else if (Bouncer.value === "1" && Balloons.value === "1") {
+        } else if (document.getElementById("Bouncer1").value === "1" && document.getElementById("Bouncer2").value === "1") {
             return <TheCastle6hrHalf />
-        } else if (Bouncer.value === "2" && Balloons.value === "1") {
+        } else if (document.getElementById("Bouncer1").value === "2" && document.getElementById("Bouncer2").value === "1") {
             return <TheCastle8hrHalf />
-        } else if (Bouncer.value === "0" && Balloons.value === "2") {
+        } else if (document.getElementById("Bouncer1").value === "0" && document.getElementById("Bouncer2").value === "2") {
             return <TheCastle4hrFull />
-        } else if (Bouncer.value === "1" && Balloons.value === "2") {
+        } else if (document.getElementById("Bouncer1").value === "1" && document.getElementById("Bouncer2").value === "2") {
             return <TheCastle6hrfull />
-        } else if (Bouncer.value === "2" && Balloons.value === "2") {
+        } else if (document.getElementById("Bouncer1").value === "2" && document.getElementById("Bouncer2").value === "2") {
             return <TheCastle8hrfull />
         } else {
             return <p>Make a Selection</p>
@@ -36,15 +32,17 @@ export default function TestComp() {
         <div className="App">
             <>
                 <div>
-                    <FormStyled>
+                    <FormStyled >
                         <div>
                             <SelectDiv onChange={(event) => {
+                                console.log('######### on change')
                                 setActiveStuf(CheckDropDown(event.target.value))
                             }}>
                                 <SelectStyled htmlFor="tipoId" >
-                                    Select Package
+                                    Select Length
                                 </SelectStyled>
-                                <StyledSelect id="Bouncer" >
+                                <StyledSelect id="Bouncer1" >
+                                    <option selected value="5" >Please Make A Selection</option>
                                     <option value="0" >4hr ($200)</option>
                                     <option value="1" >6hr ($300)</option>
                                     <option value="2">8hr ($400)</option>
@@ -53,6 +51,7 @@ export default function TestComp() {
                                     Balloons
                                 </SelectStyled>
                                 <StyledSelect id="Bouncer2">
+                                    <option selected value="5" >Please Make A Selection</option>
                                     <option value="0" >No Thank You</option>
                                     <option value="1" >Half Arch ($175)</option>
                                     <option value="2">Full Arch ($225)</option>

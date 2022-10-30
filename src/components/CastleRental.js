@@ -37,14 +37,20 @@ function CastleRental() {
             <div className="content-tabs">
                 <div
                     className={toggleState === 1 ? "content  active-content2" : "content"}>
-                    {/* <h1 style={{ fontSize: '2rem', fontWeight: '100', color: 'white', padding: '3rem 3rem 0rem 3rem' }}>Book your bouncer below then continue to step 2 to pay for your rental!</h1> */}
+
                     <TheCastleCheckout />
                 </div>
                 <div
                     className={toggleState === 2 ? "content  active-content2" : "content"}>
-                    <ColDiv>
-                        <PayP>Question?</PayP>
-                        <p style={{ padding: '1rem', fontSize: '1.75rem' }}>Awnser</p>
+                    <ColDiv style={{ textAlign: 'center', padding: '1rem'}}>
+                        <PayP style={{ padding: '1rem', fontSize: '2.5rem' }}>How soon do you drop off/pick-up?</PayP>
+                        <p style={{ padding: '1rem', fontSize: '1.25rem' }}>We typically arrive 30-45 minutes prior to arrival, if balloons are selected please exepect an hour prior to start time. For pick we arrive about 20 minutes after the events end time.</p>
+                        <PayP style={{ padding: '1rem', fontSize: '2.5rem' }}>What do you need to have a bounce house at a park?</PayP>
+                        <p style={{ padding: '1rem', fontSize: '1.25rem' }}>You must check with the city and seee if there are required permits to have the bouncer.</p>
+                        <PayP style={{ padding: '1rem', fontSize: '2.5rem' }}>Can you cancel a reservation?</PayP>
+                        <p style={{ padding: '1rem', fontSize: '1.25rem' }}>We require a 14-day cancelation notice for a full refund, if you are outside of that window we allow a reschedule based upon availablility.</p>
+                        <PayP style={{ padding: '1rem', fontSize: '2.5rem' }}>Still have questions? Call or text us at the number below!</PayP>
+                        <PayP>707-707-7077</PayP>
 
                         
                     </ColDiv>

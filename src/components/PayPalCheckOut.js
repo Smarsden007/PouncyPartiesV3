@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'
 import styled from "styled-components";
 
@@ -7,7 +7,6 @@ import styled from "styled-components";
 export const TheCastle4hr = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $200.00</h2>
 
                 <PayPalButtons style={{
@@ -22,13 +21,12 @@ export const TheCastle4hr = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "200.00",
                                 },
                             },
                         ],
                     });
                 }} />
-            </PayPalScriptProvider>
 
         </PayPalDiv>
     )
@@ -36,7 +34,6 @@ export const TheCastle4hr = () => {
 export const TheCastle6hr = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $300.00</h2>
 
                 <PayPalButtons style={{
@@ -51,13 +48,12 @@ export const TheCastle6hr = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "300.00",
                                 },
                             },
                         ],
                     });
                 }} />
-            </PayPalScriptProvider>
 
         </PayPalDiv>
     )
@@ -65,7 +61,6 @@ export const TheCastle6hr = () => {
 export const TheCastle8hr = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $400.00</h2>
 
                 <PayPalButtons style={{
@@ -80,13 +75,12 @@ export const TheCastle8hr = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "400.00",
                                 },
                             },
                         ],
                     });
                 }} />
-            </PayPalScriptProvider>
 
         </PayPalDiv>
     )
@@ -95,7 +89,6 @@ export const TheCastle8hr = () => {
 export const TheCastle4hrHalf = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $375.00</h2>
 
                 <PayPalButtons style={{
@@ -110,13 +103,12 @@ export const TheCastle4hrHalf = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "375.00",
                                 },
                             },
                         ],
                     });
                 }} />
-            </PayPalScriptProvider>
 
         </PayPalDiv>
     )
@@ -124,7 +116,6 @@ export const TheCastle4hrHalf = () => {
 export const TheCastle6hrHalf = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $475.00</h2>
 
                 <PayPalButtons style={{
@@ -139,13 +130,12 @@ export const TheCastle6hrHalf = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "475.00",
                                 },
                             },
                         ],
                     });
                 }} />
-            </PayPalScriptProvider>
 
         </PayPalDiv>
     )
@@ -153,7 +143,6 @@ export const TheCastle6hrHalf = () => {
 export const TheCastle8hrHalf = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $575.00</h2>
 
                 <PayPalButtons style={{
@@ -168,13 +157,12 @@ export const TheCastle8hrHalf = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "575.00",
                                 },
                             },
                         ],
                     });
                 }} />
-            </PayPalScriptProvider>
 
         </PayPalDiv>
     )
@@ -184,7 +172,6 @@ export const TheCastle8hrHalf = () => {
 export const TheCastle4hrFull = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $425.00</h2>
 
                 <PayPalButtons style={{
@@ -199,13 +186,13 @@ export const TheCastle4hrFull = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "425.00",
                                 },
                             },
                         ],
                     });
                 }} />
-            </PayPalScriptProvider>
+   
 
         </PayPalDiv>
     )
@@ -213,7 +200,7 @@ export const TheCastle4hrFull = () => {
 export const TheCastle6hrfull = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
+            
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $525.00</h2>
 
                 <PayPalButtons style={{
@@ -228,13 +215,13 @@ export const TheCastle6hrfull = () => {
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "525.00",
                                 },
                             },
                         ],
                     });
                 }} />
-            </PayPalScriptProvider>
+         
 
         </PayPalDiv>
     )
@@ -242,7 +229,7 @@ export const TheCastle6hrfull = () => {
 export const TheCastle8hrfull = () => {
     return (
         <PayPalDiv style={{ padding: '1rem' }}>
-            <PayPalScriptProvider options={{ "client-id": "AeJzJ2q46GK7xRWxiHUSCsoEwlVRbY_hAasM8mMjG8v2haPGn7LNgyV-Z7ET7PwYv-9MHMI8HtuAiwYB" }}>
+           
                 <h2 style={{ fontSize: '2rem', fontWeight: '300', color: 'white' }}>Total: $625.00</h2>
 
                 <PayPalButtons style={{
@@ -252,24 +239,75 @@ export const TheCastle8hrfull = () => {
                     width: 200,
                     tagline: false,
                     shape: "rect"
-                }} createOrder={(data, actions) => {
+                }} createOrder={(data, actions,err) => {
                     return actions.order.create({
+                        intent: "CAPTURE",
                         purchase_units: [
                             {
                                 amount: {
-                                    value: "2.00",
+                                    value: "625.00",
                                 },
                             },
                         ],
-                    });
+                        onApprove: async (data, actions ) => {
+                            const order = await actions.order.capture();
+                            
+                            return actions.order.capture().then(function(details) {
+                                                alert('Transaction completed by ' + details.payer.name.given_name);
+                                              });
+                        },
+                        onError: (err) => {
+                            console.log(err)
+                        }
+                    }
+                    );
+                    
                 }} />
-            </PayPalScriptProvider>
 
         </PayPalDiv>
     )
 }
-
-
+//test
+// export function TheCastle8hrfull() {
+//     const paypal = useRef();
+//     useEffect(() => {
+//       window.paypal
+//         .Buttons({
+//           createOrder: (data, actions, err) => {
+//              actions.order.create({
+//               intent: "CAPTURE",
+//               purchase_units: [
+//                 {
+//                   description: "Cool looking table",
+//                   amount: {
+//                     currency_code: "USD",
+//                     value: 650.0,
+//                   },
+//                 },
+//               ],
+//             });
+//           },
+//           onApprove: async (data, actions) => {
+//             const order = await actions.order.
+//             capture();
+//             console.log(order);
+//             return actions.order.capture().then(function(details) {
+//                 alert('Transaction completed by ' + details.payer.name.given_name);
+//               });
+//           },
+//           onError: (err) => {
+//             console.log(err);
+//           },
+//         })
+//         .render(paypal.current);
+//     }, [1]);
+  
+//     return (
+//       <div>
+//         <div ref={paypal}></div>
+//       </div>
+//     );
+//   }
 
 export const PayPalDiv = styled.div`
 width: 25vw;
